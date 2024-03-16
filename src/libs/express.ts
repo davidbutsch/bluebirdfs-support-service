@@ -10,7 +10,6 @@ import {
 import { BASE_PATH, config } from "@/common";
 import express, { Express } from "express";
 
-import { AccountController } from "@/modules/account";
 import { AppError } from "@/errors";
 import { StatusCodes } from "http-status-codes";
 import cookieParser from "cookie-parser";
@@ -49,7 +48,7 @@ securityMiddleware(app);
 standardMiddleware(app);
 
 useExpressServer(app, {
-  controllers: [AccountController],
+  controllers: [],
   routePrefix: BASE_PATH,
   defaultErrorHandler: false,
   middlewares: [
