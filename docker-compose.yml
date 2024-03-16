@@ -2,7 +2,7 @@ services:
   microservice:
     build:
       context: ..
-      dockerfile: ./node-microservice-template/Dockerfile
+      dockerfile: ./bluebirdfs-support-service/Dockerfile
     ports:
       - "80:80"
     restart: always
